@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam js</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-black">
+    
+    <section>
+        <div class="side-nav-menu min-vh-100 position-fixed d-flex top-0 ">
+            <div class="nav-tab  flex-column justify-content-between min-vh-100 p-4 d-none">
+                <div class="links">
+                    <ul class="list-unstyled overflow-hidden">
+                        <li onclick="showSearchInputs(); closeSideNav()" class="py-2 position-relative ">Search</li>
+                        <li onclick="getCategory(); closeSideNav()" class="py-2 position-relative ">Categories</li>
+                        <li onclick="getArea(); closeSideNav()" class="py-2 position-relative ">Area</li>
+                        <li onclick="getIngrediant(); closeSideNav()" class="py-2 position-relative ">Ingredients</li>
+                        <li onclick="showContacts(); closeSideNav()" class="py-2 position-relative ">Contact Us</li>
+                    </ul>
+                </div>
+                <div class="nav-footer">
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <div class="footer">
+                        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black">
+                <img class="logo" src="./img/logo.png" alt="" srcset="">
+                <i class="fa-solid open-close-icon fa-align-justify fa-2x"></i>
+                <div>
+                    <i class="fa-solid fa-globe d-block"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container w-75 d-none" id="searchContainer">
+        <div class="row py-4 ">
+            <div class="col-md-6 ">
+                <input id="searchByName" class="form-control bg-transparent text-white" type="text"
+                    placeholder="Search By Name">
+            </div>
+            <div class="col-md-6">
+                <input id="searchByLetter" maxlength="1" class="form-control bg-transparent text-white"
+                    type="text" placeholder="Search By First Letter">
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="min-vh-100 position-relative">
+            <div class="inner-loading-screen top-0 start-0 end-0 bottom-0 justify-content-center align-items-center d-none">
+                <i class="fa fa-spinner fa-spin fa-5x"></i>
+            </div>
+        
+        
+            <div class="container dn">
+                <div class="row py-5 g-4 mx-auto" id="rowData">
+                    <div
+                        class="loading-screen position-fixed d-flex top-0 start-0 end-0 bottom-0  bg-black justify-content-center align-items-center">
+                        <i class="fa fa-spinner fa-spin fa-5x"></i>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
